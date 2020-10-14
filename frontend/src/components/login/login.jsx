@@ -3,10 +3,6 @@ import loginImg from '../../login.svg';
 import GoogleLogin from 'react-google-login';
 
 export class Login extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   responseGoogle = response => {
     console.log(response);
   };
@@ -17,7 +13,7 @@ export class Login extends React.Component {
         <div className="header">Login</div>
         <div className="content">
           <div className="image">
-            <img src={loginImg} />
+            <img alt="login" src={loginImg} />
           </div>
           <div className="form">
             <div className="form-group">
