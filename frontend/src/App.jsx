@@ -1,5 +1,4 @@
 import React from 'react';
-//import logo from './logo.svg';
 import './App.scss';
 import { Login,Register } from './components/login/index';
 
@@ -7,7 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLogginActive: true
+      isLoginActive: true
     };
   }
 
@@ -17,30 +16,30 @@ class App extends React.Component {
   }
 
   changeState() {
-    const { isLogginActive } = this.state;
+    const { isLoginActive } = this.state;
 
-    if (isLogginActive) {
+    if (isLoginActive) {
       this.rightSide.classList.remove("right");
       this.rightSide.classList.add("left");
     } else {
       this.rightSide.classList.remove("left");
       this.rightSide.classList.add("right");
     }
-    this.setState(prevState => ({ isLogginActive: !prevState.isLogginActive }));
+    this.setState(prevState => ({ isLoginActive: !prevState.isLoginActive }));
   }
 
   render() {
-    const { isLogginActive } = this.state;
-    const current = isLogginActive ? "Register" : "Login";
-    const currentActive = isLogginActive ? "login" : "register";
+    const { isLoginActive } = this.state;
+    const current = isLoginActive ? "Register" : "Login";
+    const currentActive = isLoginActive ? "login" : "register";
     return (
       <div className="App">
         <div className="login">
           <div className="container" ref={ref => (this.container = ref)}>
-            {isLogginActive && (
+            {isLoginActive && (
               <Login containerRef={ref => (this.current = ref)} />
             )}
-            {!isLogginActive && (
+            {!isLoginActive && (
               <Register containerRef={ref => (this.current = ref)} />
             )}
           </div>

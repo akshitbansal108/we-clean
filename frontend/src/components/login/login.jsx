@@ -1,9 +1,15 @@
 import React from "react";
 import loginImg from "../../login.svg";
+import GoogleLogin from 'react-google-login';
 
 export class Login extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  
+  responseGoogle = response => {
+    console.log(response);
   }
 
   render() {
@@ -22,6 +28,14 @@ export class Login extends React.Component {
             <div className="form-group">
               <label htmlFor="password">Password</label>
               <input type="password" name="password" placeholder="password" />
+            </div>
+            <div className="social-container">
+              <GoogleLogin
+                clientId="451360158803-nvifimie0pt1d2vt7uq419kgm6kqpn2k.apps.googleusercontent.com"
+                onSuccess={this.responseGoogle}
+                onFailure={this.responseGoogle}
+                cookiePolicy={'single_host_origin'}
+              />
             </div>
           </div>
         </div>
