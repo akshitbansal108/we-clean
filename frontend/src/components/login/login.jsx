@@ -1,5 +1,5 @@
-import React from "react";
-import loginImg from "../../login.svg";
+import React from 'react';
+import loginImg from '../../login.svg';
 import GoogleLogin from 'react-google-login';
 
 export class Login extends React.Component {
@@ -7,10 +7,9 @@ export class Login extends React.Component {
     super(props);
   }
 
-  
   responseGoogle = response => {
     console.log(response);
-  }
+  };
 
   render() {
     return (
