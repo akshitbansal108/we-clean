@@ -24,9 +24,13 @@
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
     "@nestjs/platform-express": "^7.0.0",
+<<<<<<< HEAD
     "@types/mongoose": "^5.7.36",
     "dotenv": "^8.2.0",
     "mongoose": "^5.10.9",
+=======
+    "node-sass": "^4.14.1",
+>>>>>>> 0857deb2b30fb2e61b8a812b9ac748ebbe3977c9
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.5.4"
